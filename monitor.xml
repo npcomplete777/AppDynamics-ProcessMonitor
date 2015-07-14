@@ -1,0 +1,22 @@
+<monitor>
+    <name>ProcessMonitor</name>
+       <type>managed</type>
+        <description>ProcessMonitor</description>
+        <monitor-configuration>     
+		</monitor-configuration>
+        <monitor-run-task>
+           <!--  Edit execution-style as needed. -->
+           <execution-style>periodic</execution-style>
+		   <execution-style>periodic</execution-style>
+		   <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+		   <execution-timeout-in-secs>30</execution-timeout-in-secs>
+           <name>Run</name>
+           <type>executable</type>
+           <task-arguments></task-arguments>
+            <executable-task>
+                <type>file</type>
+                <!--  Use only one file element per os-type. -->
+                 <file os-type="windows">startPowershell.bat</file>
+           </executable-task>
+         </monitor-run-task>
+</monitor>
